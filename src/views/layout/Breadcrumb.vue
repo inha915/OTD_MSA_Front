@@ -34,7 +34,7 @@
 }
 .alram {
   align-self: center;
-  width: 4%;
+  width: 5%;
   /* position: absolute; */
   right: 20%;
 }

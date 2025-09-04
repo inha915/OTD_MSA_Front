@@ -38,7 +38,7 @@ const meal_info = ref([
             <div>{{ `${item.meal_day}` }}</div>
             <div v-if="item.check === 1">체크</div>
           </div>
-          <div>{{ `${item.kcal}` }}</div>
+          <div>{{ `${item.kcal}` }} kcal</div>
         </div>
       </div>
     </section>
@@ -114,6 +114,9 @@ section {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 
   .meal_card {
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-between;
     width: 152px;
     height: 90px;
     /* flex: 1; */
