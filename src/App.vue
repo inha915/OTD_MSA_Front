@@ -1,28 +1,25 @@
 <script setup>
+import Layout from './views/layout/Layout.vue';
+
+import { useRoute, useRouter } from 'vue-router';
+import { ref, watch, onMounted } from 'vue';
+
+
+
 </script>
 
 <template>
-  <div class="app">
-        <div class="container py-4">
-
-            <header class="pb-4 mb-4 border-bottom">
-                <router-link to="/" class="text-dark text-decoration-none">
-                    <b class="fs-4">Memo Application</b>
-                </router-link>
-            </header>
-
-            <main>
-                <router-view />
-            </main>
-
-            <footer class="pt-4 mt-4 border-top">
-                &copy; 2025. Memo. All rights reserved.
-            </footer>
-
-        </div>
-    </div>
+  <div class="layout">
+    <Layout />
+  </div>
 </template>
 
-<style lang="scss" scoped>
-.app .container {  max-width: 576px; }
+<style>
+.layout {
+  width: 391px;          /* 모바일 기준 폭 (원하는 크기로 조정: 375px, 414px 등) */
+  min-height: 805px;     /* 화면 전체 높이 채우기 */
+  margin: 0 auto;        /* 화면 중앙 정렬 (PC에서 가운데 고정) */
+  background: #fff;      /* 바탕색 지정 (안하면 양 옆에 배경색 다 보임) */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 데스크탑에서 모바일 박스 느낌 */
+}
 </style>
