@@ -20,7 +20,7 @@ import Footer from './Footer.vue'
     display: flex;
     row-gap: 15px; /* 행 간격을 10px로 설정 */
     flex-direction: column;
-    height: 100vh;
+    height: 805px;
   }
 
   

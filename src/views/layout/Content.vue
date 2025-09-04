@@ -1,20 +1,45 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const meal_info = ref([
+  { meal_day: '아침', kcal: 150, check: 1 },
+  { meal_day: '점심', kcal: 450, check: 1 },
+  { meal_day: '저녁', kcal: 550, check: 1 },
+  { meal_day: '간식', kcal: 120, check: 0 },
+]);
+</script>
 
 <template>
   <main class="content">
-    <section class="progress">
-      <h3>진행중</h3>
-      <div class="cards">
-        <div class="card">체중 5키로 감량!</div>
-        <div class="card">+ 추가 목표</div>
+    <section class="progress-section">
+      <div class="weather_container">
+        <span class="title_text">날씨</span>
+        <div class="cards">
+          <div class="card">날씨 표출 !</div>
+        </div>
+      </div>
+      <div class="progress_container">
+        <span class="title_text">진행중</span>
+        <div class="cards">
+          <div class="card">+ 추가 목표</div>
+        </div>
       </div>
     </section>
 
     <section class="community">
-      <h3>커뮤니티</h3>
-      <div class="post" v-for="i in 2" :key="i">
-        <p class="user">고등 불주먹</p>
-        <p class="text">오늘 점심주 가성하실분</p>
+      <span>오늘의 식단</span>
+      <div class="meal_cards">
+        <div
+          class="meal_card"
+          v-for="(item, index) in meal_info"
+          :key="item.meal_day"
+        >
+          <div class="meal_card_top">
+            <div>{{ `${item.meal_day}` }}</div>
+            <div v-if="item.check === 1">체크</div>
+          </div>
+          <div>{{ `${item.kcal}` }}</div>
+        </div>
       </div>
     </section>
   </main>
@@ -23,9 +48,10 @@
 <style scoped>
 .content {
   flex: 1;
-  padding: 16px;
-  overflow-y: auto;
-  
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: auto; */
 }
 
 /* 섹션 간 여백 추가 */
@@ -33,16 +59,27 @@ section {
   margin-bottom: 24px;
 }
 
-.progress{
-  height: 20%;
+.progress-section {
   display: flex;
-  flex-direction: column;
+  gap: 15px;
+  flex-direction: row;
+  row-gap: 15px;
+  background-color: #fafafa;
+  padding-bottom: 10px; /* (선택) 내부 여백 추가 */
 }
 
+.title_text {
+  display: flex;
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
 
-.progress h3,
-.community h3 {
-  margin-bottom: 12px;
+.community span {
+  display: flex;
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 .cards {
@@ -50,16 +87,45 @@ section {
   gap: 12px;
 }
 .card {
-  flex: 1;
+  width: 168px;
+  height: 121px;
+  /* flex: 1; */
   background: #fff;
   padding: 16px;
   border-radius: 12px;
-  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 .post {
   background: #fff;
   padding: 12px;
   margin-top: 8px;
   border-radius: 12px;
+}
+
+.meal_cards {
+  width: 350px;
+  height: 223px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 15px; /* 카드 간격 */
+  background: #ffe864;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+  .meal_card {
+    width: 152px;
+    height: 90px;
+    /* flex: 1; */
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .meal_card_top {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 </style>
