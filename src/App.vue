@@ -23,6 +23,9 @@ html, body, #app {
   justify-content: center; /* 가로 중앙 */
   align-items: center;     /* 세로 중앙 */
   background: #ffffff;     /* (선택) 바깥 배경색 */
+  /* 폰트 설정하고 예비로 쓸것 지정해둔거 */
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans KR', sans-serif;
 }
 
 .layout {
