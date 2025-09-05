@@ -26,8 +26,9 @@ const meal_info = ref([
       </div>
     </section>
 
-    <section class="community">
-      <span>오늘의 식단</span>
+    <section class="meal">
+
+      <span class="title_text">오늘의 식단</span>
       <div class="meal_cards">
         <div
           class="meal_card"
@@ -78,15 +79,14 @@ section {
 
 .title_text {
   display: flex;
-  font-weight: 900;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 20px;
   margin-bottom: 15px;
+  color: #303030;
 }
 
-.community span {
+.meal span {
   display: flex;
-  font-weight: 900;
-  font-size: 18px;
   margin-bottom: 15px;
   margin-top: 15px;
 }
@@ -133,11 +133,17 @@ section {
     padding: 16px;
     border-radius: 12px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    font-size: 14px;
+    color: #303030;
   }
 
   .meal_card_top {
     display: flex;
     justify-content: space-between;
+    font-size: 18px;
+    color: #303030;
+    font-weight:bolder;
   }
   .meal_card img {
     width: 60%;
