@@ -7,16 +7,18 @@
       <img class="alram" src="/image/main/alarm.png" alt="알람" />
     </div> 
   </header>
-  <div class="user">
-      <div class="user_profile">
+  <div class="user ">
+      <div class="user_profile ">
         <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
         <div class="info">
-          <span class="welcome_text">안녕하세요 :)</span>
-          <span class="name">행키 님</span>
+          <span class=" welcome_text">안녕하세요 :)</span>
+          <span class="  name ">행키 님</span>
         </div>
       </div>
       <div class="point">
-        <img class="point_img" src="/image/main/point.png" alt="포인트">5,000 p</div>
+        <img class="point_img" src="/image/main/point.png" alt="포인트">
+        <span class="text-body-1 ">5,000 </span>
+      </div>
     </div>
 </template>
 
@@ -70,16 +72,21 @@
   align-items: center;
   justify-content: space-between; 
 
-  .name {
-    font-size: 24px;
-  }
   .point{
-   align-self:end;
+  display: flex;
+  justify-content: center; 
+  align-self:flex-end;
+   gap: 5px;
+ 
   }
+  .point span{
+    padding-top: 2px;
+    
+   }
 
 }
 .avatar {
-  font-size: 32px;
+  /* font-size: 32px; */
   width: 80px;
   height: 80px;
 }

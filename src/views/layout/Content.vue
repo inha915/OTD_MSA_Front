@@ -63,7 +63,7 @@ const meal_info = ref([
 
 /* 섹션 간 여백 추가 */
 section {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
 
 .progress-section {

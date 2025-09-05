@@ -19,13 +19,13 @@ import MobileFooter from '@/components/MobileFooter.vue';
   justify-content: space-around;
   padding: 10px;
   border-top: 1px solid #ddd;
-  background: #fff;
+  background: #ffffff;
   border-radius: 0 0 20px 20px;
 }
 button {
   flex: 1;
   background: none;
-  border: none;
+  border:none;
   font-size: 14px;
 }
 </style>
