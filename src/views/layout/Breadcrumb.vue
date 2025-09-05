@@ -1,25 +1,27 @@
 <script setup></script>
 
 <template>
-  <header class="header">
+  <div class="top_header">
     <div class="title">
       <img class="otd_logo" src="/image/main/ontoday_logo.png" alt="로고" />
       <img class="alram" src="/image/main/alarm.png" alt="알람" />
     </div> 
-  </header>
+  </div>
+
   <div class="user ">
-      <div class="user_profile ">
-        <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
-        <div class="info">
-          <span class=" welcome_text">안녕하세요 :)</span>
-          <span class="  name ">행키 님</span>
-        </div>
-      </div>
-      <div class="point">
-        <img class="point_img" src="/image/main/point.png" alt="포인트">
-        <span class="text-body-1 ">5,000 </span>
+    <div class="user_profile ">
+      <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
+      <div class="info">
+        <span class="  welcome_text">안녕하세요 :)</span>
+        <span class=" text-h5 name ">행키 님</span>
       </div>
     </div>
+      <div class="point">
+        <img class="point_img" src="/image/main/point.png" alt="포인트"/>
+        <span class="text-body-1 ">5,000 </span>
+    </div>
+  </div>
+  
 </template>
 
 <style scoped>
@@ -50,11 +52,11 @@
   display: flex;
   flex-direction: column;
   justify-content:end;
-  font-size: 13px;
-  row-gap: 15px;
+  font-size: 12px;
+  row-gap: 5px;
 }
 
-.header {
+.top_header {
   background: #00D5DF;
   color: #000;
   padding: 20px;
@@ -67,7 +69,7 @@
   flex-direction: row;
 }
 .user {
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between; 
