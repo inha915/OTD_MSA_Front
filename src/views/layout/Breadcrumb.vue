@@ -13,12 +13,12 @@
       <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
       <div class="info">
         <span class="  welcome_text">안녕하세요 :)</span>
-        <span class=" text-h5 name ">행키 님</span>
+        <span class="  name ">행키 님</span>
       </div>
     </div>
       <div class="point">
         <img class="point_img" src="/image/main/point.png" alt="포인트"/>
-        <span class="text-body-1 ">5,000 </span>
+        <span >5,000 </span>
     </div>
   </div>
   
@@ -83,10 +83,16 @@
   }
   .point span{
     padding-top: 2px;
+    font-size: 14px;
     
    }
-
 }
+
+.name { 
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .avatar {
   /* font-size: 32px; */
   width: 80px;
