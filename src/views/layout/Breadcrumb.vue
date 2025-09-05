@@ -3,19 +3,20 @@
 <template>
   <header class="header">
     <div class="title">
-      <img class="otd_logo" src="/image/ontoday_logo.png" alt="로고" />
-      <img class="alram" src="/image/alarm.png" alt="알람" />
+      <img class="otd_logo" src="/image/main/ontoday_logo.png" alt="로고" />
+      <img class="alram" src="/image/main/alarm.png" alt="알람" />
     </div> 
   </header>
   <div class="user">
       <div class="user_profile">
-        <img class="avatar" src="/image/test.png" alt="프로필"></img>
+        <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
         <div class="info">
           <span class="welcome_text">안녕하세요 :)</span>
           <span class="name">행키 님</span>
         </div>
       </div>
-      <div class="point">😊5,000 p</div>
+      <div class="point">
+        <img class="point_img" src="/image/main/point.png" alt="포인트">5,000 p</div>
     </div>
 </template>
 
@@ -27,6 +28,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
+}
+.point_img{
+  width: 20px;
+  height: 20px;
 }
 
 .otd_logo {

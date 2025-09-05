@@ -4,8 +4,8 @@ import { ref } from 'vue';
 const meal_info = ref([
   { meal_day: '아침', kcal: 150, check: 1 },
   { meal_day: '점심', kcal: 450, check: 1 },
-  { meal_day: '저녁', kcal: 550, check: 1 },
-  { meal_day: '간식', kcal: 120, check: 0 },
+  { meal_day: '저녁', kcal: 0, check: 1 },
+  { meal_day: '간식', kcal: 0, check: 0 },
 ]);
 </script>
 
@@ -36,9 +36,16 @@ const meal_info = ref([
         >
           <div class="meal_card_top">
             <div>{{ `${item.meal_day}` }}</div>
-            <div v-if="item.check === 1">체크</div>
+            <img v-if="item.check === 1" src="/image/main/check.png" alt="" />
+            <img v-else src="/image/main/cross.png" alt="" />
           </div>
-          <div>{{ `${item.kcal}` }} kcal</div>
+          <div v-if="item.kcal > 0">{{ `${item.kcal}` }} kcal</div>
+          <img
+            v-else-if="item.kcal === 0 && item.check === 1"
+            src="/image/main/check_not_meal.png"
+            alt="단식 체크"
+          />
+          <img v-else src="/image/main/not_meal.png" alt="단식 미체크" />
         </div>
       </div>
     </section>
@@ -114,7 +121,7 @@ section {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 
   .meal_card {
-    display: flex;    
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 152px;
@@ -130,5 +137,14 @@ section {
     display: flex;
     justify-content: space-between;
   }
+  .meal_card img {
+    width: 60%;
+  }
+  .meal_card_top img {
+    width: 15%;
+  }
+
+ 
+
 }
 </style>
