@@ -54,8 +54,9 @@ const meal_info = ref([
 
 <style scoped>
 .content {
+  height: 450px;
   flex: 1;
-  padding: 15px;
+  padding: 10px 20px 0px;
   display: flex;
   flex-direction: column;
   /* overflow-y: auto; */
@@ -63,7 +64,7 @@ const meal_info = ref([
 
 /* 섹션 간 여백 추가 */
 section {
-  margin-bottom: 24px;
+  margin-bottom: 15px;
 }
 
 .progress-section {
@@ -72,7 +73,7 @@ section {
   flex-direction: row;
   row-gap: 15px;
   background-color: #fafafa;
-  padding-bottom: 10px; /* (선택) 내부 여백 추가 */
+  /* padding-bottom: 10px; (선택) 내부 여백 추가 */
 }
 
 .title_text {
@@ -87,6 +88,7 @@ section {
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .cards {
@@ -98,7 +100,7 @@ section {
   height: 121px;
   /* flex: 1; */
   background: #fff;
-  padding: 16px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
@@ -116,7 +118,7 @@ section {
   grid-template-columns: repeat(2, 1fr); /* 2열 */
   gap: 15px; /* 카드 간격 */
   background: #ffe864;
-  padding: 16px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 

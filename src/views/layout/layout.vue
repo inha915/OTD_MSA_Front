@@ -6,7 +6,7 @@ import Footer from './Footer.vue'
 <template>
     <div class="app-layout">
     <div >
-        <Breadcrumb class="header" /> <!--  상단 내용 -->
+        <Breadcrumb  /> <!--  상단 내용 -->
     </div>
       <Content />    <!-- 컨텐츠 내용-->
       <Footer />     <!-- 하단 네비게이션 -->
@@ -18,7 +18,7 @@ import Footer from './Footer.vue'
   <style scoped>
   .app-layout {
     display: flex;
-    row-gap: 15px; /* 행 간격을 10px로 설정 */
+    row-gap: 20px; /* 행 간격을 20px로 설정 */
     flex-direction: column;
     height: 805px;
   }
