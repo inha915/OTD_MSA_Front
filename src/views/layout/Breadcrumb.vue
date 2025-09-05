@@ -84,6 +84,7 @@
   .point span{
     padding-top: 2px;
     font-size: 14px;
+    font-weight: 500;
     
    }
 }

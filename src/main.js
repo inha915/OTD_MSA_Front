@@ -14,6 +14,7 @@ import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import VCalendar from "v-calendar";
 import "v-calendar/style.css";
 
+
 const app = createApp(App);
 const pinia = createPinia();
 const vuetify = createVuetify();
@@ -27,5 +28,4 @@ app.use(router);
 app.use(VCalendar, {
     componentPrefix: "vc", // 모든 컴포넌트 이름 앞에 vc- 붙음
 });
-  
 app.mount("#app");
