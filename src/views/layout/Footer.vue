@@ -38,11 +38,21 @@ const isActive = computed(() => route.path === '/')
       >
     </div>
     <div class="nav_container">
-      <router-link to="/test" class="nav-menu" :class="{active : route.path.startsWith('/test')}">
-        <img  :src=" route.path.startsWith('/test') ? '/image/navigator_img/community-s.png' : '/image/navigator_img/community.png'" alt="커뮤니티" />
-        커뮤니티</router-link
-      >
-    </div>
+  <router-link
+    to="/community"
+    class="nav-menu"
+    :class="{ active: route.path.startsWith('/community') }"
+  >
+    <img
+      :src="route.path.startsWith('/community')
+        ? '/image/navigator_img/community-s.png'
+        : '/image/navigator_img/community.png'"
+      alt="커뮤니티"
+    />
+    커뮤니티
+  </router-link>
+</div>
+
     <div class="nav_container">
       <router-link to="/test" class="nav-menu" :class="{active : route.path.startsWith('/test')}">
         <img  :src=" route.path.startsWith('/test') ? '/image/navigator_img/user-s.png' : '/image/navigator_img/user.png'" alt="내정보" />
