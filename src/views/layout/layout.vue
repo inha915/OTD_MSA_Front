@@ -8,7 +8,8 @@ import Footer from './Footer.vue'
     <div >
         <Breadcrumb  /> <!--  상단 내용 -->
     </div>
-      <Content />    <!-- 컨텐츠 내용-->
+    <router-view/>
+      <!-- <Content />    컨텐츠 내용 -->
       <Footer />     <!-- 하단 네비게이션 -->
     </div>
   </template>
