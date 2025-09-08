@@ -55,10 +55,12 @@ const mealInfo = ref([
 </template>
 
 <style scoped>
-section { margin-bottom: 15px; }
+section { margin-bottom: 15px; 
+  margin: 0 20px 0 20px;}
 
 .progress-section {
   display: flex;
+
   gap: 15px;
   flex-direction: row;
 }
