@@ -11,9 +11,10 @@ const state = reactive({
 
 onMounted(async () => {
   const res = await getAll();
-  state.weeklyChallenge = res.weeklyChallenge;
-  state.monthlyChallenge = res.monthlyChallenge;
-  state.dailyChallenge = res.dailyChallenge;
+  state.weeklyChallenge = res.data.weeklyChallenge;
+  state.monthlyChallenge = res.data.monthlyChallenge;
+  state.dailyChallenge = res.data.dailyChallenge;
+  console.log(res.data);
 });
 </script>
 
