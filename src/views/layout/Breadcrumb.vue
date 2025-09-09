@@ -2,16 +2,24 @@
 import {useRoute} from 'vue-router'
 
 const route = useRoute();
+
+const handleClick= ()=>{
+  console.log("알람 클릭");
+}
+
 </script>
 
 <template>
   <div class="top_header">
     <div class="title">
       <img class="otd_logo" src="/image/main/ontoday_logo.png" alt="로고" />
-      <img class="alram" src="/image/main/alarm.png" alt="알람" />
+      <img class="alram" src="/image/main/alarm.png" alt="알람" @click="handleClick" />
     </div> 
   </div>
 
+
+
+  
   <div class="user " v-if="route.name ==='Home'" >
     <div class="user_profile ">
       <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
@@ -23,8 +31,7 @@ const route = useRoute();
       <div class="point">
         <img class="point_img" src="/image/main/point.png" alt="포인트"/>
         <span >5,000 </span>
-    </div>
-    
+    </div>    
   </div>
   
 </template>
@@ -51,6 +58,7 @@ const route = useRoute();
   width: 5%;
   /* position: absolute; */
   right: 20%;
+  cursor: pointer;
 }
 
 .info {
@@ -84,6 +92,7 @@ const route = useRoute();
   justify-content: center; 
   align-self:flex-end;
    gap: 5px;
+   cursor: pointer;
  
   }
   .point span{
