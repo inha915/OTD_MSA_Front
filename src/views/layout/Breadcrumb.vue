@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import {useRoute} from 'vue-router'
+
+const route = useRoute();
+</script>
 
 <template>
   <div class="top_header">
@@ -8,7 +12,7 @@
     </div> 
   </div>
 
-  <div class="user ">
+  <div class="user " v-if="route.name ==='Home'" >
     <div class="user_profile ">
       <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
       <div class="info">
@@ -20,6 +24,7 @@
         <img class="point_img" src="/image/main/point.png" alt="포인트"/>
         <span >5,000 </span>
     </div>
+    
   </div>
   
 </template>
