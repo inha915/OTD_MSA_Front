@@ -32,8 +32,8 @@ const isActive = computed(() => route.path === '/')
       >
     </div>
     <div class="nav_container">
-      <router-link to="/test" class="nav-menu" :class="{active : route.path.startsWith('/test')}">
-        <img  :src=" route.path.startsWith('/test') ? '/image/navigator_img/chellenge-s.png' : '/image/navigator_img/chellenge.png'" alt="챌린지" />
+      <router-link to="/challenge" class="nav-menu" :class="{active : route.path.startsWith('/challenge')}">
+        <img  :src=" route.path.startsWith('/challenge') ? '/image/navigator_img/chellenge-s.png' : '/image/navigator_img/chellenge.png'" alt="챌린지" />
         챌린지</router-link
       >
     </div>
