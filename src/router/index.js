@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+
 import Test from '@/components/test.vue';
+import Home from '@/views/HomeView.vue'
 import Community from '@/views/community/CommunityView.vue';
 import ChallengeHome from '@/views/challenge/ChallengeHome.vue';
 import ChallengeList from '@/views/challenge/ChallengeList.vue';
@@ -11,8 +13,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: () => import('../views/HomeView.vue'),
-    },
+      component: Home,
+    },   
     {
       path: '/community',
       name: 'Commuity',
