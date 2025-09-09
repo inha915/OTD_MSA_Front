@@ -65,13 +65,10 @@ const handleClick = (index)=>{
 </template>
 
 <style scoped>
-section { 
-  margin-bottom: 15px; 
-  margin: 0 0px 0 20px;}
 
 .progress-section {
   display: flex;
-
+margin-bottom: 20px;
   gap: 15px;
   flex-direction: row;
 }
@@ -94,7 +91,6 @@ section {
   box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 }
 
-.meal span { display: flex; margin: 0 0 15px 0; }
 
 .meal_cards {
   width: 350px;
@@ -115,7 +111,7 @@ section {
   width: 152px;
   height: 90px;
   background: #fff;
-  padding: 16px;
+  padding: 15px;
   border-radius: 12px;
   box-shadow: 0 3px 5px rgba(0,0,0,0.1);
   font-weight: 500;
