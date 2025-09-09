@@ -24,9 +24,10 @@ import Footer from './Footer.vue'
     height: 805px;
 
   }
+  /* 공통 화면 좌우 여백 */
   .main_margin
   {
-    margin: 0px 20px 0 20px;
+    margin: 0px 20px 0 20px; 
   }
   .nav-footer
   {
