@@ -12,12 +12,12 @@ const categoryLabelMap = {
   work: '운동',
   love: '연애'
 };
-const hearderType = computed (()=> route.meta.hearderType ?? 'logo');
-const showUserPanel = computed (()=> route.meta.showUserPanel===true);
+const headerType = computed(() => route.meta.headerType ?? 'logo');
+const showUserPanel = computed(() => route.meta.showUserPanel === true);
 
-const hearderTitle = computed (() =>
+const headerTitle = computed (() =>
 {
-  console.log(hearderType);
+ 
   // 타이틀이 있으면 타이틀 우선으로 타이틀을 리턴하고
   if (route.meta.title)
   {
@@ -41,22 +41,23 @@ const handleClick= ()=>{
 <template>
   <div class="top_header">
     <!-- 로고 출력 해야할 때 -->
-    <div class="title" v-if="hearderType === 'logo'">
+    <div class="title" v-if="headerType === 'logo'">
       <img class="otd_logo" src="/image/main/ontoday_logo.png" alt="로고" />
       <img class="alram" src="/image/main/alarm.png" alt="알람" @click="handleClick" />
-    </div> 
+    </div>
     <!-- 타이틀 출력 할때 -->
-    <div class="title" v-else >
-      <button class="black-btn" @click="$router.back()" arial-label="뒤로가기"><</button>
-      <div class="hearder-text">{{ hearderTitle }}</div>
+    <div class="title" v-else>
+      <button class="black-btn" @click="$router.back()" aria-label="뒤로가기">
+        <img class="back-btn" src="/image/main/back_icon.png" alt="뒤로가기"></button>
+      <div class="hearder-text">{{ headerTitle }}</div>
       <img class="alram" src="/image/main/alarm.png" alt="알람" @click="handleClick" />
-    </div> 
+    </div>
   </div>
 
 
 
 
-  <div class="user " v-if="route.name ==='Home'" >
+  <div class="user " v-if="route.name ==='Home'">
     <div class="user_profile ">
       <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
       <div class="info">
@@ -64,12 +65,12 @@ const handleClick= ()=>{
         <span class="  name ">행키 님</span>
       </div>
     </div>
-      <div class="point">
-        <img class="point_img" src="/image/main/point.png" alt="포인트"/>
-        <span >5,000 </span>
-    </div>    
+    <div class="point">
+      <img class="point_img" src="/image/main/point.png" alt="포인트" />
+      <span>5,000 </span>
+    </div>
   </div>
-  
+
 </template>
 
 <style scoped>
@@ -89,10 +90,22 @@ const handleClick= ()=>{
 .otd_logo {
   width: 40%;  
 }
+.hearder-text {
+  color: #FAFAFA;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.back-btn{
+  width: 12px;
+  height: 24px;
+  cursor: pointer;
+}
 .alram {
   align-self: center;
-  width: 5%;
-  /* position: absolute; */
+  width: 25px;
+  height: 25px;
   right: 20%;
   cursor: pointer;
 }
