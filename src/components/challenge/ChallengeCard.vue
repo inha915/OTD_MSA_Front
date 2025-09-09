@@ -5,19 +5,24 @@ const props = defineProps({
   challengeId: 0,
   image: '',
   name: '',
-  point: 0,
+  reward: 0,
 });
 </script>
 
 <template>
   <div>
-    <img :src="`${props.image}`" :alt="`${props.name}`" />
+    <img :src="`http://localhost:8080/challenge/${props.image}`"  />
+    <!-- :alt="`${props.name}`" -->
     <div>
-      <img src="/public/image/main/point.png" alt="point" />{{
-        `${props.point}P`
+      <img src="/public/image/main/point.png" alt="point" class="point" />{{
+        `${props.reward}P`
       }}
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.point {
+  width: 15px;
+}
+</style>
