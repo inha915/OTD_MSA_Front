@@ -29,8 +29,10 @@ const handleClick= ()=>{
       </div>
     </div>
       <div class="point">
+        <router-link to="/pointshop" class="pointShop" :class="{active : route.path.startsWith('/pointshop')}">
         <img class="point_img" src="/image/main/point.png" alt="포인트"/>
         <span >5,000 </span>
+        </router-link>
     </div>    
   </div>
   
