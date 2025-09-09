@@ -1,6 +1,4 @@
-import axios from 'axios';
-
-axios.defaults.baseURL = '/api/OTD/challenge';
+import axios from "axios";
 
 export const getAll = () => {
   return axios.get().catch((e) => e.response);

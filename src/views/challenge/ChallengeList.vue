@@ -14,7 +14,12 @@ onMounted(async () => {
   state.weeklyChallenge = res.data.weeklyChallenge;
   state.monthlyChallenge = res.data.monthlyChallenge;
   state.dailyChallenge = res.data.dailyChallenge;
+<<<<<<< HEAD
   console.log(res.data);
+=======
+
+  console.log('data', res.data);
+>>>>>>> 95cd8c6bce0d4e48156638540f298d4f1df2df13
 });
 </script>
 
@@ -28,12 +33,14 @@ onMounted(async () => {
           :id="challenge.id"
           :image="challenge.image"
           :name="challenge.name"
+          :reward="challenge.reward"
         ></ChallengeCard>
       </div>
     </div>
     <!-- 월간 경쟁 챌린지 -->
     <div>
       <div>월간 경쟁 챌린지</div>
+<<<<<<< HEAD
       <div v-for="challenge in state.monthlyChallenge" :key="challenge.id">
         <div>{{ `> ${challenge.name}` }}</div>
         <ChallengeCard
@@ -41,6 +48,18 @@ onMounted(async () => {
           :image="challenge.image"
           :name="challenge.name"
         ></ChallengeCard>
+=======
+      <div v-for="(list, category) in state.monthlyChallenge">
+        <div>{{ `> ${category}` }}</div>
+        <div v-for="challenge in list">
+          <ChallengeCard
+            :id="challenge.id"
+            :image="challenge.image"
+            :name="challenge.name"
+            :reward="challenge.reward"
+          ></ChallengeCard>
+        </div>
+>>>>>>> 95cd8c6bce0d4e48156638540f298d4f1df2df13
       </div>
       <!-- 월간 개인 챌린지 -->
       <div>
@@ -50,6 +69,7 @@ onMounted(async () => {
             :id="challenge.id"
             :image="challenge.image"
             :name="challenge.name"
+            :reward="challenge.reward"
           ></ChallengeCard>
         </div>
       </div>
