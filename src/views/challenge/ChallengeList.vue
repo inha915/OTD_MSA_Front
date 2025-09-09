@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted, reactive } from 'vue';
-import ChallengeCard from '@/components/challenge/ChallengeCard.vue';
-import { getAll } from '@/services/challenge/ChallengeService';
+import { onMounted, reactive } from "vue";
+import ChallengeCard from "@/components/challenge/ChallengeCard.vue";
+import { getAll } from "@/services/challenge/ChallengeService";
 
 const state = reactive({
   weeklyChallenge: [],
@@ -23,7 +23,7 @@ onMounted(async () => {
     <!-- 주간 챌린지 -->
     <div>
       <div>진행중인 주간 챌린지</div>
-      <div v-for="challenge in state.weeklyChallenge">
+      <div v-for="challenge in state.weeklyChallenge" :key="challenge.id">
         <ChallengeCard
           :id="challenge.id"
           :image="challenge.image"
@@ -34,7 +34,7 @@ onMounted(async () => {
     <!-- 월간 경쟁 챌린지 -->
     <div>
       <div>월간 경쟁 챌린지</div>
-      <div v-for="challenge in state.monthlyChallenge">
+      <div v-for="challenge in state.monthlyChallenge" :key="challenge.id">
         <div>{{ `> ${challenge.name}` }}</div>
         <ChallengeCard
           :id="challenge.id"
@@ -45,7 +45,7 @@ onMounted(async () => {
       <!-- 월간 개인 챌린지 -->
       <div>
         <div>월간 개인 챌린지</div>
-        <div v-for="challenge in state.dailyChallenge">
+        <div v-for="challenge in state.dailyChallenge" :key="challenge.id">
           <ChallengeCard
             :id="challenge.id"
             :image="challenge.image"
