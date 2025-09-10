@@ -46,6 +46,9 @@ const handleClick= ()=>{
 
 <template>
   <div class="top_header">
+    <div>
+      <img class="image" src="/image/main/fixed-header.png">
+    </div>
     <!-- 로고 출력 해야할 때 -->
     <div class="title" v-if="headerType === 'logo'">
       <img class="otd_logo" src="/image/main/ontoday_logo.png" alt="로고" />
@@ -82,10 +85,15 @@ const handleClick= ()=>{
 </template>
 
 <style scoped>
+.image{
+  position: absolute;
+  width: 390px;
+  right: 1px;
+  top: 1px;
+}
 .title {
-  background: #00D5DF;
-  margin-top: 24px;
-  
+  /* background: #00D5DF; */
+  margin-top: 38px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
@@ -127,6 +135,7 @@ const handleClick= ()=>{
 }
 
 .top_header {
+  position: relative;
   background: #00D5DF;
   color: #000;
   padding: 20px;
