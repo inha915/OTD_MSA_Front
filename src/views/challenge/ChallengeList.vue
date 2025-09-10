@@ -20,7 +20,7 @@ onMounted(async () => {
 </script>
 
 <template>
-   <swiper
+   <!-- <swiper
     :slidesPerView="1"
     :spaceBetween="30"
     :loop="true"
@@ -36,7 +36,7 @@ onMounted(async () => {
     <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
     <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
     <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-  </swiper>
+  </swiper> -->
   <div>
     <!-- 주간 챌린지 -->
     <div>
