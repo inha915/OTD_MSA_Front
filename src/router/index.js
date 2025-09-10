@@ -9,6 +9,7 @@ import ChallengeHome from '@/views/challenge/ChallengeHome.vue';
 import ChallengeList from '@/views/challenge/ChallengeList.vue';
 import CommunityCategory from '@/components/community/CommunityCategory.vue';
 
+import PointShop from '@/components/pointshop/PointShop.vue'
 
 
 const router = createRouter({
