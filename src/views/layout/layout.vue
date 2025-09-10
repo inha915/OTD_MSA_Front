@@ -35,6 +35,7 @@ import Footer from './Footer.vue'
   .nav-footer
   {
     margin-top: auto;
+    border-radius: 0px 0px 60px 60px ;
    
   }
 

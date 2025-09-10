@@ -33,6 +33,6 @@ html, body, #app {
   height: 805px;
   background: #FAFAFA;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 20px;
+  border-radius: 60px 60px 60px 60px;
 }
 </style>

@@ -130,7 +130,7 @@ const handleClick= ()=>{
   background: #00D5DF;
   color: #000;
   padding: 20px;
-  border-radius: 20px 20px 0 0; 
+  border-radius: 60px 60px 0 0; 
   height: 104px;
 }
 .user_profile
