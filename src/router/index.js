@@ -51,6 +51,11 @@ const router = createRouter({
       component: ChallengeList,
       meta: {headerType: 'title', title: '챌린지 목록',  showUserPanel:false},
     },
+    {
+      path: '/pointshop',
+      name: 'PointShop',
+      component: PointShop,
+    },
   ],
 });
 
