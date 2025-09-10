@@ -24,14 +24,14 @@ onMounted(async () => {
     <!-- 주간 챌린지 -->
     <div>
       <div>주간 챌린지</div>
-      <div v-for="challenge in state.weeklyChallenge" :key="challenge.id">
-        <ChallengeCard
-          :id="challenge.id"
-          :image="challenge.image"
-          :name="challenge.name"
-          :reward="challenge.reward"
-        ></ChallengeCard>
-      </div>
+      <ChallengeCard
+        v-for="challenge in state.weeklyChallenge"
+        :key="challenge.id"
+        :id="challenge.id"
+        :image="challenge.image"
+        :name="challenge.name"
+        :reward="challenge.reward"
+      ></ChallengeCard>
     </div>
     <!-- 월간 경쟁 챌린지 -->
     <div>

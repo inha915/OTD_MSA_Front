@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="test">
     <img class="img-card" :src="`${props.image}`" />
     <!-- :alt="`${props.name}`" -->
     <div>
@@ -21,14 +21,16 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .point {
   width: 15px;
 }
-.img-card {
-  width: 168px;
-  height: 121px;
-  border-radius: 15px;
-  border: 1px solid #ddd;
+.test {
+  .img-card {
+    width: 168px;
+    height: 121px;
+
+    box-shadow: 1px 1px #ddd;
+  }
 }
 </style>
