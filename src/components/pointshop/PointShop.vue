@@ -16,7 +16,6 @@ const onTyping = () => {
     state.searchList = [];
     return;
   }
-  console.log('User is typing:', state.search);
   pointData();
 };
 
@@ -26,7 +25,6 @@ const pointData = () => {
     state.searchList = [];
     return;
   }
-  console.log('Search initiated for:', state.search);
   state.searchList = allItems.value.filter(item =>
     item.toLowerCase().includes(query)
   );
