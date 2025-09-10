@@ -14,6 +14,11 @@ import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 import VCalendar from "v-calendar";
 import "v-calendar/style.css";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue-3/dist/bootstrap-vue-3.css';
+import BootstrapVue3 from 'bootstrap-vue-3';
 
 const app = createApp(App);
 const pinia = createPinia();
@@ -29,3 +34,4 @@ app.use(VCalendar, {
     componentPrefix: "vc", // 모든 컴포넌트 이름 앞에 vc- 붙음
 });
 app.mount("#app");
+app.use(BootstrapVue3);
