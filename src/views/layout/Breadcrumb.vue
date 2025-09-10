@@ -1,7 +1,36 @@
 <script setup>
-import {useRoute} from 'vue-router'
+import {useRoute, useRouter} from 'vue-router'
+import { computed } from 'vue';
+import CommunityCategory from '@/components/community/CommunityCategory.vue';
 
 const route = useRoute();
+const router = useRouter();
+
+const categoryLabelMap = {
+  free:'자유수다',
+  diet: '다이어트',
+  work: '운동',
+  love: '연애'
+};
+const headerType = computed(() => route.meta.headerType ?? 'logo');
+const showUserPanel = computed(() => route.meta.showUserPanel === true);
+
+const headerTitle = computed (() =>
+{
+ 
+  // 타이틀이 있으면 타이틀 우선으로 타이틀을 리턴하고
+  if (route.meta.title)
+  {
+    return route.meta.title;
+  }
+  // 타이틀이 없고 카테고리가 있으면 카테고리의 params에서 객체의 값을 mapping 해서 리턴 해줌
+  //  혹시나 값없으면 커뮤니티로 리턴 함  
+  if (route.name==='CommunityCategory')
+  {
+    return categoryLabelMap[route.params.category] ?? '커뮤니티';
+  }
+  return ''
+})
 
 const handleClick= ()=>{
   console.log("알람 클릭");
@@ -11,16 +40,24 @@ const handleClick= ()=>{
 
 <template>
   <div class="top_header">
-    <div class="title">
+    <!-- 로고 출력 해야할 때 -->
+    <div class="title" v-if="headerType === 'logo'">
       <img class="otd_logo" src="/image/main/ontoday_logo.png" alt="로고" />
       <img class="alram" src="/image/main/alarm.png" alt="알람" @click="handleClick" />
-    </div> 
+    </div>
+    <!-- 타이틀 출력 할때 -->
+    <div class="title" v-else>
+      <button class="black-btn" @click="$router.back()" aria-label="뒤로가기">
+        <img class="back-btn" src="/image/main/back_icon.png" alt="뒤로가기"></button>
+      <div class="hearder-text">{{ headerTitle }}</div>
+      <img class="alram" src="/image/main/alarm.png" alt="알람" @click="handleClick" />
+    </div>
   </div>
 
 
 
-  
-  <div class="user " v-if="route.name ==='Home'" >
+
+  <div class="user " v-if="route.name ==='Home'">
     <div class="user_profile ">
       <img class="avatar" src="/image/main/test.png" alt="프로필"></img>
       <div class="info">
@@ -28,14 +65,21 @@ const handleClick= ()=>{
         <span class="  name ">행키 님</span>
       </div>
     </div>
+<<<<<<< HEAD
       <div class="point">
         <router-link to="/pointshop" class="pointShop" :class="{active : route.path.startsWith('/pointshop')}">
         <img class="point_img" src="/image/main/point.png" alt="포인트"/>
         <span >5,000 </span>
         </router-link>
     </div>    
+=======
+    <div class="point">
+      <img class="point_img" src="/image/main/point.png" alt="포인트" />
+      <span>5,000 </span>
+    </div>
+>>>>>>> c8d87796858d31672035a42f28c4d9b85756684a
   </div>
-  
+
 </template>
 
 <style scoped>
@@ -55,10 +99,22 @@ const handleClick= ()=>{
 .otd_logo {
   width: 40%;  
 }
+.hearder-text {
+  color: #FAFAFA;
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+}
+
+.back-btn{
+  width: 12px;
+  height: 24px;
+  cursor: pointer;
+}
 .alram {
   align-self: center;
-  width: 5%;
-  /* position: absolute; */
+  width: 25px;
+  height: 25px;
   right: 20%;
   cursor: pointer;
 }
