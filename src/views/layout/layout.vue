@@ -21,8 +21,6 @@ import Footer from './Footer.vue';
 <style scoped>
 .app-layout {
   display: flex;
-  /* 행 간격을 20px로 설정 */
-  row-gap: 30px;
   flex-direction: column;
   height: 805px;
   user-select: none;
