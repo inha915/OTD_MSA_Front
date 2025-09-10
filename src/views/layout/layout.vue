@@ -4,15 +4,17 @@ import Content from './Content.vue'
 import Footer from './Footer.vue'
 </script>
 <template>
-    <div class="app-layout">
-    <div >
-        <Breadcrumb  /> <!--  상단 내용 -->
+  <div class="app-layout">
+    <div>
+      <Breadcrumb /> <!--  상단 내용 -->
     </div>
-    <router-view class ="main_margin"/>
-      <!-- <Content />    컨텐츠 내용 -->
-      <Footer  class ="nav-footer   " />     <!-- 하단 네비게이션 -->
+    <div class="main_margin">
+      <router-view />
     </div>
-  </template>
+    <!-- <Content />    컨텐츠 내용 -->
+    <Footer class="nav-footer   " /> <!-- 하단 네비게이션 -->
+  </div>
+</template>
   
 
   

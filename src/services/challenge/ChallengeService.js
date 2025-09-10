@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = '/api/OTD/challenge';
 
 export const getAll= () => {
+  console.log("dd");
   return axios
-    .get()
+    .get('/chellenge')
     .catch((e) => e.response);
 };
