@@ -1,11 +1,11 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps } from 'vue';
 
 const props = defineProps({
-  challengeId: "",
-  image: "",
-  name: "",
-  reward: "",
+  challengeId: '',
+  image: '',
+  name: '',
+  reward: '',
 });
 </script>
 
