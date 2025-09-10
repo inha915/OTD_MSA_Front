@@ -20,18 +20,34 @@ onMounted(async () => {
 </script>
 
 <template>
+   <!-- <swiper
+    :slidesPerView="1"
+    :spaceBetween="30"
+    :loop="true"
+    :pagination="{
+      clickable: true,
+    }"
+    :navigation="true"
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide>Slide 1</swiper-slide>
+    <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
+    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
+    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
+    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+  </swiper> -->
   <div>
     <!-- 주간 챌린지 -->
     <div>
       <div>주간 챌린지</div>
-      <ChallengeCard
-        v-for="challenge in state.weeklyChallenge"
-        :key="challenge.id"
-        :id="challenge.id"
-        :image="challenge.image"
-        :name="challenge.name"
-        :reward="challenge.reward"
-      ></ChallengeCard>
+        <ChallengeCard
+          v-for="challenge in state.weeklyChallenge"
+          :id="challenge.id"
+          :image="challenge.image"
+          :name="challenge.name"
+          :reward="challenge.reward"
+        ></ChallengeCard>
     </div>
     <!-- 월간 경쟁 챌린지 -->
     <div>
