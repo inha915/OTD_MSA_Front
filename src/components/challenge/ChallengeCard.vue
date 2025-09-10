@@ -11,7 +11,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <img :src="`http://localhost:8080/challenge/${props.image}`"  />
+    <img :src="`${props.image}`" />
     <!-- :alt="`${props.name}`" -->
     <div>
       <img src="/public/image/main/point.png" alt="point" class="point" />{{
