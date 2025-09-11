@@ -27,7 +27,7 @@ import Footer from './Footer.vue';
 }
 /* 공통 화면 좌우 여백 */
 .main_margin {
-  margin: 30px 20px 0 20px;
+  margin: 0px 20px 0 20px;
 }
 .nav-footer {
   margin-top: auto;
