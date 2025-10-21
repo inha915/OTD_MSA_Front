@@ -2,7 +2,7 @@
 
 
 **OneToday (OTD)** 는 사용자의 **운동·식단·커뮤니티 활동을 한눈에 기록하고 관리할 수 있는 웹 앱**입니다.  
-꾸준한 건강 루틴을 돕기 위해 **Vue3 + Pinia + Vuetify 기반의 SPA 구조**로 제작되었으며,  
+꾸준한 건강 루틴을 돕기 위해 **Vue3 + Pinia + Vuetify 기반의 SPA 구조**로 제작되었으며
 백엔드 MSA 시스템과 실시간으로 연동되어 **유연한 확장성과 반응형 UI/UX**를 제공합니다.
 ---
 ![Image](https://github.com/user-attachments/assets/53dda8ac-dcee-43b2-8008-4cd6e56eaf49)
