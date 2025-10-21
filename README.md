@@ -3,7 +3,8 @@
 **OneToday (OTD)** 프론트엔드 레포지토리입니다.  
 이 프로젝트는 MSA(Microservice Architecture) 기반의 헬스케어 라이프스타일 플랫폼으로
 사용자의 **운동 · 식단 · 커뮤니티 활동**을 기록하고 관리할 수 있도록 설계되었습니다.
-
+---
+![Image](https://github.com/user-attachments/assets/53dda8ac-dcee-43b2-8008-4cd6e56eaf49)
 ---
 
 ## ⚙️ 개발 환경
