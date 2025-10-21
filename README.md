@@ -6,27 +6,6 @@
 
 ---
 
-## 🧩 프로젝트 구조
-
-OTD_MSA_Front/
-├── src/
-│ ├── assets/ # 이미지, 폰트 등 정적 리소스
-│ ├── components/ # 공통 UI 컴포넌트
-│ ├── layouts/ # 레이아웃 구성 (MainLayout 등)
-│ ├── pages/ # 주요 화면 (Home, Community, Login 등)
-│ ├── router/ # Vue Router 설정
-│ ├── stores/ # Pinia 상태 관리
-│ ├── services/ # Axios API 요청 로직
-│ ├── utils/ # 헬퍼 함수, 포맷터 등
-│ └── App.vue
-│
-├── public/ # 파비콘, 공개 파일
-├── package.json
-├── vite.config.js
-└── README.md
-
----
-
 ## ⚙️ 개발 환경
 
 | 항목 | 버전 |
@@ -55,13 +34,19 @@ npm run dev
 
 npm run build
 
-🌐 백엔드 연동
+---
+
+## 🌐 백엔드 연동
+
 이 프론트엔드는 MSA 구조의 백엔드 API와 연동됩니다.
 
-서비스	         레포지토리            	역할
-Gateway  	OTD_MSA_Back_Gateway     API 게이트웨이
-User	    OTD_MSA_Back_User	      유저 · 인증 도메인
-Life     	OTD_MSA_Back_Life	    커뮤니티 · 운동 · 식단 도메인
+| 서비스 | 레포지토리 | 역할 |
+|--------|-------------|------|
+| **Gateway** | [OTD_MSA_Back_Gateway](https://github.com/inha915/OTD_MSA_Back_Gateway) | API 게이트웨이 |
+| **User** | [OTD_MSA_Back_User](https://github.com/inha915/OTD_MSA_Back_User) | 유저 · 인증 도메인 |
+| **Life** | [OTD_MSA_Back_Life](https://github.com/inha915/OTD_MSA_Back_Life) | 커뮤니티 · 운동 · 식단 도메인 |
+
+---
 
 💡 주요 기능
 
@@ -71,9 +56,13 @@ Life     	OTD_MSA_Back_Life	    커뮤니티 · 운동 · 식단 도메인
 💬 커뮤니티 기능 — 게시글, 댓글, 좋아요, 이미지 업로드
 🎯 챌린지 / 포인트 시스템 (추후 연동 예정)
 
+---
+
 🧑‍💻 개발자 정보
 이름	             역할	                설명
 박인하     	프론트엔드 메인 개발     	커뮤니티 UI/UX 설계, Pinia 상태관리 구조 구축, 게시글·댓글·좋아요 기능 및 백엔드 연동 구현
+
+---
 
 🏗️ 시스템 아키텍처
 plaintext
@@ -87,6 +76,8 @@ plaintext
  └───────────────┴────────────────┴────────────────┘
 📄 라이선스
 이 프로젝트는 MIT License를 따릅니다.
+
+---
 
 💬 Tip
 이 파일을 추가한 뒤 아래 명령으로 커밋하세요:
